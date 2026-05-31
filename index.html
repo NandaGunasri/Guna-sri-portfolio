@@ -1,111 +1,599 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guna Sri | Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanda Gunasri | Software Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional portfolio of Nanda Gunasri, a Software Developer specialized in AI, Cloud Computing, ServiceNow, and Full-Stack Web Development.">
+    <meta name="keywords" content="Software Developer Portfolio, Java Developer, Full Stack Developer, AI Developer, Cloud Computing, ServiceNow Developer, Nanda Gunasri">
+    <meta name="author" content="Nanda Gunasri">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nanda Gunasri | Software Developer">
+    <meta property="og:description" content="Portfolio of Nanda Gunasri focusing on AI, Cloud, ServiceNow, and Full-Stack Engineering. Featured projects: NeoLearn TechTrack and ElectionShield SecureVote AI.">
+    
+    <!-- Styling & Fonts -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="tsparticles"></div>
+    <!-- CSS Background Overlay -->
+    <div class="grid-bg"></div>
+    <div class="gradient-glow"></div>
 
-<header>
-    <div class="logo">Guna Sri</div>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <span class="toggle" onclick="toggleTheme()">🌙</span>
-    </nav>
-</header>
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <a href="#" class="logo" id="logoLink">Nanda<span>Gunasri</span></a>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav id="navMenu">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Hi, I'm <span>Guna Sri</span></h1>
-        <p class="subtitle" id="typing"></p>
-        <br>
-        <a href="#" class="btn">Download Resume</a>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="full-section">
-    <div class="content">
-        <h2>LET ME <span class="highlight">INTRODUCE</span> MYSELF</h2>
-
-        <p>👩‍💻 I’m a B.Tech 3rd Year Computer Science student at <strong>Mohan Babu University</strong>.</p>
-
-        <p>🚀 Passionate about <span class="highlight">Web Development</span>, <span class="highlight">DSA</span>, <span class="highlight">AI/ML</span>, and <span class="highlight">Cloud Computing</span>.</p>
-
-        <p>💡 Skilled in HTML, CSS, JavaScript, Java, C, Python, and AWS.</p>
-
-        <p>🎯 Currently seeking an internship as a <span class="highlight">Software Engineer</span>.</p>
-
-        <p>✨ I believe consistency beats talent, and I never stop learning.</p>
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="full-section">
-    <div class="content">
-        <h2>Skills</h2>
-
-        <div class="skill">
-            <div class="skill-title">HTML</div>
-            <div class="progress"><div style="width:90%"></div></div>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-tag">Portfolio Showcase</div>
+        <h1>Hi, I'm <span>Nanda Gunasri</span></h1>
+        <p class="subtitle-role" id="typingText">Software Developer</p>
+        <p class="tagline">Building responsive full-stack applications, integrating AI workflows, deploying containerized cloud services, and designing ServiceNow platforms.</p>
+        
+        <div class="hero-ctas">
+            <a href="#contact" class="btn-primary">Contact Me</a>
+            <a href="resume.pdf" class="btn-secondary" download="Nanda_Gunasri_Resume.pdf">Download Resume</a>
+            
+            <a href="https://github.com/NandaGunasri" class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/nanda-gunasri-6b59a429a/" class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
         </div>
 
-        <div class="skill">
-            <div class="skill-title">CSS</div>
-            <div class="progress"><div style="width:85%"></div></div>
+        <div class="hero-badges">
+            <span class="hero-badge"><span style="color:#06b6d4;">◆</span> AWS Cloud</span>
+            <span class="hero-badge"><span style="color:#6366f1;">◆</span> ServiceNow</span>
+            <span class="hero-badge"><span style="color:#3b82f6;">◆</span> Full-Stack</span>
+            <span class="hero-badge"><span style="color:#06b6d4;">◆</span> Artificial Intelligence</span>
+        </div>
+    </section>
+
+    <!-- ABOUT & EDUCATION SECTION -->
+    <section class="main-section reveal" id="about">
+        <div class="section-header">
+            <p class="section-subtitle">Biography</p>
+            <h2 class="section-title">About Me</h2>
+        </div>
+        
+        <div class="about-grid">
+            <div class="about-text">
+                <p>I am pursuing my B.Tech in Computer Science at <strong>Mohan Babu University</strong>, with an expected graduation year of 2027.</p>
+                <p>Technology, for me, is a journey of continuous learning and exploration. I enjoy discovering emerging technologies, experimenting with new tools, and turning ideas into practical projects. Whether it's Generative AI, cloud computing, ServiceNow, or software development, I am always eager to step outside my comfort zone, learn something new, and challenge myself.</p>
+                <p>Through internships, hackathons, certifications, and personal projects, I have learned that growth comes from curiosity, consistency, and the willingness to learn from mistakes. Every project teaches me something valuable, helping me improve my technical skills and problem-solving abilities day by day.</p>
+                <p>My goal is to build impactful solutions, contribute to meaningful innovations, and continue growing as a versatile technology professional.</p>
+            </div>
+            
+            <div class="about-tabs">
+                <div class="about-tabs-header">
+                    <button class="tab-btn active" onclick="switchTab(event, 'competencies')">Focus Areas</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'education')">Education</button>
+                </div>
+                
+                <div class="tab-content active" id="competencies">
+                    <div class="education-item">
+                        <div class="education-title">🧠 Artificial Intelligence</div>
+                        <div class="education-desc">Exploring Generative AI, LLMs, AI Agents, and intelligent systems to create impactful solutions.</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-title">☁️ Cloud & Enterprise Platforms</div>
+                        <div class="education-desc">Learning cloud technologies, ServiceNow, automation, and platform-based application development.</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-title">💻 Software Engineering</div>
+                        <div class="education-desc">Building responsive web applications and continuously expanding knowledge across modern software technologies.</div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="education">
+                    <div class="education-item">
+                        <div class="education-title">Mohan Babu University</div>
+                        <div class="education-meta">B.Tech in Computer Science (CSE)</div>
+                        <div class="education-desc">Expected Graduation: 2027. Coursework includes Data Structures, OOPs, Database Management, and Network fundamentals.</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-title">B.R. Oxford Mahila Junior College</div>
+                        <div class="education-meta">Intermediate Education</div>
+                        <div class="education-desc">Completed in 2023 under the Board of Intermediate Education, Kandukur.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS (CASE STUDIES - CENTERPIECE) -->
+    <section class="main-section reveal" id="projects">
+        <div class="section-header">
+            <p class="section-subtitle">Portfolio Projects</p>
+            <h2 class="section-title">Case Studies</h2>
         </div>
 
-        <div class="skill">
-            <div class="skill-title">JavaScript</div>
-            <div class="progress"><div style="width:75%"></div></div>
+        <!-- CASE STUDY 1: NEOLEARN TECHTRACK -->
+        <div class="project-case-study">
+            <div class="project-info">
+                <div class="project-tag">Project 01 • Developer Platform</div>
+                <h3 class="project-title">NeoLearn TechTrack</h3>
+                <p class="project-description">A real-time developer progress and learning tracking platform built to monitor, map, and analyze software engineering skill progression. It supports role profiles, concept mapping, and AI-assisted learning suggestions.</p>
+                
+                <div class="project-tech-badges">
+                    <span class="tech-badge">Next.js</span>
+                    <span class="tech-badge">TypeScript</span>
+                    <span class="tech-badge">Tailwind CSS</span>
+                    <span class="tech-badge">Framer Motion</span>
+                    <span class="tech-badge">Zustand</span>
+                    <span class="tech-badge">Firebase Firestore</span>
+                    <span class="tech-badge">Firebase Auth</span>
+                    <span class="tech-badge">Google Gemini</span>
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">GCP Cloud Run</span>
+                </div>
+                
+                <div class="case-study-details">
+                    <div class="detail-block">
+                        <div class="detail-title">Problem Statement</div>
+                        <div class="detail-content">Traditional progress tracking tools remain disconnected from actual code progression and require tedious manual entry, making learning pathways static and hard to manage.</div>
+                    </div>
+                    <div class="detail-block">
+                        <div class="detail-title">Solution</div>
+                        <div class="detail-content">Built an interactive platform linking user progress data directly to a state store, leveraging Firebase for auth/data and Gemini for tailored guidance.</div>
+                    </div>
+                </div>
+
+                <!-- Deep Dive Accordion -->
+                <div class="project-deep-dive" id="deepDive1">
+                    <button class="deep-dive-trigger" onclick="toggleDeepDive('deepDive1')">
+                        <span>Architecture & Technical Highlights</span>
+                        <span class="icon">▼</span>
+                    </button>
+                    <div class="deep-dive-content">
+                        <div class="deep-dive-section">
+                            <div class="deep-dive-subtitle">System Architecture</div>
+                            <div class="deep-dive-text">Developed with a Next.js framework, deploying state updates via Zustand. Persistent tracking metrics are managed in Firebase Firestore, and the backend service is containerized via Docker for GCP Cloud Run deployment.</div>
+                        </div>
+                        <div class="deep-dive-section">
+                            <div class="deep-dive-subtitle">Challenges Solved</div>
+                            <div class="deep-dive-text">Structured secure API communication endpoints on GCP Cloud Run, integrating Firestore event streams to update user profile pages without lag.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-links" style="flex-wrap: wrap; gap: 10px;">
+                    <a href="https://github.com/NandaGunasri/neolearn-team-TechTrack" class="btn-primary" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                    <a href="https://neolearn-team-tech-track.vercel.app/" class="btn-secondary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    <a href="https://neolearn-techtrack-backend.onrender.com/ping" class="btn-secondary" target="_blank" rel="noopener noreferrer" style="border-color: var(--accent-cyan); color: var(--accent-cyan);">Backend API</a>
+                </div>
+            </div>
+            
+            <div class="project-media">
+                <img src="neolearn_techtrack_mockup.png" alt="NeoLearn TechTrack Platform Mockup" loading="lazy">
+            </div>
         </div>
 
-        <div class="skill">
-            <div class="skill-title">Java</div>
-            <div class="progress"><div style="width:80%"></div></div>
+        <!-- CASE STUDY 2: ELECTIONSHIELD SECUREVOTE AI -->
+        <div class="project-case-study">
+            <div class="project-info">
+                <div class="project-tag">Project 02 • Security & Admin UI</div>
+                <h3 class="project-title">ElectionShield SecureVote AI</h3>
+                <p class="project-description">A secure electronic voting management and audit application leveraging role-based controls, password hashing, and multiple database schemas to store records safely.</p>
+                
+                <div class="project-tech-badges">
+                    <span class="tech-badge">React.js</span>
+                    <span class="tech-badge">Vite</span>
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Express.js</span>
+                    <span class="tech-badge">SQLite</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">MongoDB</span>
+                    <span class="tech-badge">JWT</span>
+                    <span class="tech-badge">Bcrypt</span>
+                    <span class="tech-badge">Vercel</span>
+                    <span class="tech-badge">Render</span>
+                </div>
+                
+                <div class="case-study-details">
+                    <div class="detail-block">
+                        <div class="detail-title">Problem Statement</div>
+                        <div class="detail-content">Administrating electronic election records requires solid access logging, multi-environment DB compatibility, and protection against unauthorized credential manipulation.</div>
+                    </div>
+                    <div class="detail-block">
+                        <div class="detail-title">Solution</div>
+                        <div class="detail-content">Designed a modular Express backend utilizing JWT token validation and Bcrypt hashing, connected to React client panels to manage voter roles securely.</div>
+                    </div>
+                </div>
+
+                <!-- Deep Dive Accordion -->
+                <div class="project-deep-dive" id="deepDive2">
+                    <button class="deep-dive-trigger" onclick="toggleDeepDive('deepDive2')">
+                        <span>Architecture & Technical Highlights</span>
+                        <span class="icon">▼</span>
+                    </button>
+                    <div class="deep-dive-content">
+                        <div class="deep-dive-section">
+                            <div class="deep-dive-subtitle">Security Architecture</div>
+                            <div class="deep-dive-text">Enforces Role-Based Access Control (RBAC) via secure Express middleware. Hashed user logins are authenticated using stateless JSON Web Tokens (JWT) storage rules.</div>
+                        </div>
+                        <div class="deep-dive-section">
+                            <div class="deep-dive-subtitle">Challenges Solved</div>
+                            <div class="deep-dive-text">Configured a unified database abstraction layer, allowing smooth toggling between relational SQLite/MySQL engines and NoSQL MongoDB datastores during deployment.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://github.com/NandaGunasri/electionshield-securevote-ai" class="btn-primary" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                    <a href="https://electionshield-securevote-ai-888838185654.us-central1.run.app/" class="btn-secondary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                </div>
+            </div>
+            
+            <div class="project-media">
+                <img src="electionshield_securevote_mockup.png" alt="ElectionShield SecureVote AI Dashboard" loading="lazy">
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="full-section">
-    <div class="content">
-        <h2>Projects</h2>
-        <div class="project-card">
-            🚧 Projects will be updated soon...
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section class="main-section reveal" id="skills">
+        <div class="section-header">
+            <p class="section-subtitle">Technical Competence</p>
+            <h2 class="section-title">Technical Skills</h2>
         </div>
-    </div>
-</section>
+        
+        <div class="skills-container">
+            <!-- Languages -->
+            <div class="skill-category">
+                <div class="skill-category-title"><span>✦</span> Languages</div>
+                <div class="skills-list">
+                    <div class="skill-badge">Java</div>
+                    <div class="skill-badge">C</div>
+                    <div class="skill-badge">Python</div>
+                    <div class="skill-badge">JavaScript</div>
+                    <div class="skill-badge">TypeScript</div>
+                    <div class="skill-badge">SQL</div>
+                    <div class="skill-badge">HTML5</div>
+                    <div class="skill-badge">CSS3</div>
+                </div>
+            </div>
+            
+            <!-- Frontend -->
+            <div class="skill-category">
+                <div class="skill-category-title"><span>✦</span> Frontend</div>
+                <div class="skills-list">
+                    <div class="skill-badge">React.js</div>
+                    <div class="skill-badge">Next.js</div>
+                    <div class="skill-badge">Vite</div>
+                    <div class="skill-badge">Tailwind CSS</div>
+                    <div class="skill-badge">Framer Motion</div>
+                </div>
+            </div>
+            
+            <!-- Backend -->
+            <div class="skill-category">
+                <div class="skill-category-title"><span>✦</span> Backend</div>
+                <div class="skills-list">
+                    <div class="skill-badge">Node.js</div>
+                    <div class="skill-badge">Express.js</div>
+                    <div class="skill-badge">REST APIs</div>
+                </div>
+            </div>
+            
+            <!-- Databases -->
+            <div class="skill-category">
+                <div class="skill-category-title"><span>✦</span> Databases</div>
+                <div class="skills-list">
+                    <div class="skill-badge">Firebase Firestore</div>
+                    <div class="skill-badge">SQLite</div>
+                    <div class="skill-badge">MySQL</div>
+                    <div class="skill-badge">MongoDB</div>
+                    <div class="skill-badge">PostgreSQL</div>
+                </div>
+            </div>
+            
+            <!-- Cloud & Platforms -->
+            <div class="skill-category">
+                <div class="skill-category-title"><span>✦</span> Cloud & Platforms</div>
+                <div class="skills-list">
+                    <div class="skill-badge">AWS</div>
+                    <div class="skill-badge">GCP</div>
+                    <div class="skill-badge">ServiceNow</div>
+                    <div class="skill-badge">Docker</div>
+                    <div class="skill-badge">Vercel</div>
+                    <div class="skill-badge">Render</div>
+                </div>
+            </div>
+            
+            <!-- AI & ML -->
+            <div class="skill-category">
+                <div class="skill-category-title"><span>✦</span> AI & ML</div>
+                <div class="skills-list">
+                    <div class="skill-badge">Generative AI</div>
+                    <div class="skill-badge">Large Language Models (LLMs)</div>
+                    <div class="skill-badge">Prompt Engineering</div>
+                    <div class="skill-badge">AI Agents</div>
+                    <div class="skill-badge">Retrieval-Augmented Generation (RAG)</div>
+                    <div class="skill-badge">Fine-Tuning LLMs</div>
+                    <div class="skill-badge">Google Gemini</div>
+                </div>
+            </div>
 
-<!-- CONTACT -->
-<section id="contact" class="full-section">
-    <div class="content contact-box">
-        <h2>Contact Me</h2>
+            <!-- Tools -->
+            <div class="skill-category">
+                <div class="skill-category-title"><span>✦</span> Tools & State Management</div>
+                <div class="skills-list">
+                    <div class="skill-badge">Git</div>
+                    <div class="skill-badge">GitHub</div>
+                    <div class="skill-badge">VS Code</div>
+                    <div class="skill-badge">Zustand</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea rows="5" placeholder="Your Message"></textarea>
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="main-section reveal" id="certifications">
+        <div class="section-header">
+            <p class="section-subtitle">Credentials</p>
+            <h2 class="section-title">Industry Certifications</h2>
+        </div>
+        
+        <div class="certifications-grid">
+            <!-- AWS CCP -->
+            <div class="cert-card">
+                <div class="cert-header">
+                    <div class="cert-org">Amazon Web Services</div>
+                    <svg class="cert-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div>
+                    <h3 class="cert-name">AWS Certified Cloud Practitioner</h3>
+                    <ul class="cert-highlights">
+                        <li>Core AWS cloud infrastructure services and architectural concepts.</li>
+                        <li>Platform security, compliance protocols, and key service options.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- ServiceNow CSA -->
+            <div class="cert-card">
+                <div class="cert-header">
+                    <div class="cert-org">ServiceNow</div>
+                    <svg class="cert-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>
+                </div>
+                <div>
+                    <h3 class="cert-name">ServiceNow Certified System Administrator</h3>
+                    <ul class="cert-highlights">
+                        <li>Database designs, table configurations, UI actions, and platform logic.</li>
+                        <li>Configuring client scripting, UI policies, business rules, and access controls.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- ServiceNow CAD -->
+            <div class="cert-card">
+                <div class="cert-header">
+                    <div class="cert-org">ServiceNow</div>
+                    <svg class="cert-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2b"/><polygon points="2 17 12 22 22 17"/><polygon points="2 12 12 17 22 12"/></svg>
+                </div>
+                <div>
+                    <h3 class="cert-name">ServiceNow Certified Application Developer</h3>
+                    <ul class="cert-highlights">
+                        <li>Custom application development, scripting, and endpoint integrations.</li>
+                        <li>Workflow automations using Flow Designer, events, and script structures.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <button class="contact-btn">Send Message</button>
-    </div>
-</section>
+    <!-- EXPERIENCE TIMELINE -->
+    <section class="main-section reveal" id="experience">
+        <div class="section-header">
+            <p class="section-subtitle">Career Path</p>
+            <h2 class="section-title">Professional Experience</h2>
+        </div>
+        
+        <div class="timeline">
+            <!-- AWS GenAI Virtual Internship -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-meta">
+                    <div>
+                        <span class="timeline-role">AWS Generative AI Virtual Internship</span>
+                        <span style="color:var(--text-tertiary);">|</span>
+                        <span class="timeline-company">AI/ML Program</span>
+                    </div>
+                    <span class="timeline-date">Oct 2025 – Dec 2025</span>
+                </div>
+                <ul class="timeline-desc">
+                    <li>Studied prompt engineering models and text retrieval strategies.</li>
+                    <li>Practiced setting up context-retrieval techniques (RAG) and foundational models.</li>
+                    <li>Configured security configurations and access controls for cloud AI resources.</li>
+                </ul>
+                <div class="project-tech-badges">
+                    <span class="tech-badge">Generative AI</span>
+                    <span class="tech-badge">LLMs</span>
+                    <span class="tech-badge">Prompt Engineering</span>
+                    <span class="tech-badge">Cloud Resources</span>
+                </div>
+            </div>
 
-<footer>
-    © 2026 Guna Sri
-</footer>
+            <!-- ServiceNow Virtual Internship -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-meta">
+                    <div>
+                        <span class="timeline-role">ServiceNow Virtual Internship</span>
+                        <span style="color:var(--text-tertiary);">|</span>
+                        <span class="timeline-company">ServiceNow Developer Program</span>
+                    </div>
+                    <span class="timeline-date">Sep 2025 – Oct 2025</span>
+                </div>
+                <ul class="timeline-desc">
+                    <li>Studied the ServiceNow platform layout, user management, and table designs.</li>
+                    <li>Practiced configuring Client Scripts, UI Policies, Business Rules, and UI Actions.</li>
+                    <li>Built custom configurations to automate platform task routing.</li>
+                </ul>
+                <div class="project-tech-badges">
+                    <span class="tech-badge">ServiceNow</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Client Scripts</span>
+                    <span class="tech-badge">Business Rules</span>
+                </div>
+            </div>
 
-<script src="script.js"></script>
+            <!-- Front-End Web Development Internship -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-meta">
+                    <div>
+                        <span class="timeline-role">Front-End Web Development Internship</span>
+                        <span style="color:var(--text-tertiary);">|</span>
+                        <span class="timeline-company">Software Engineering Intern</span>
+                    </div>
+                    <span class="timeline-date">Aug 2025 – Sep 2025</span>
+                </div>
+                <ul class="timeline-desc">
+                    <li>Created clean, responsive interfaces aligned with web standards using HTML5, CSS3, and JavaScript.</li>
+                    <li>Practiced mobile-first styling layouts using flexbox, CSS Grid, and media queries.</li>
+                    <li>Improved DOM rendering speeds and optimized front-end script assets.</li>
+                </ul>
+                <div class="project-tech-badges">
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Responsive Design</span>
+                </div>
+            </div>
+
+            <!-- Agentic AI Project-Based Learning -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-meta">
+                    <div>
+                        <span class="timeline-role">Agentic AI Project-Based Learning Program</span>
+                        <span style="color:var(--text-tertiary);">|</span>
+                        <span class="timeline-company">CSRBOX × IBM SkillsBuild</span>
+                    </div>
+                    <span class="timeline-date">Jul 2025 – Aug 2025</span>
+                </div>
+                <ul class="timeline-desc">
+                    <li>Completed a 4-week project-based learning program focused on Agentic AI.</li>
+                    <li>Explored AI agents, automation workflows, and intelligent system design.</li>
+                    <li>Learned fundamentals of AI agent architecture and practical AI applications.</li>
+                    <li>Developed understanding of emerging AI technologies and problem-solving approaches.</li>
+                </ul>
+                <div class="project-tech-badges">
+                    <span class="tech-badge">Agentic AI</span>
+                    <span class="tech-badge">IBM SkillsBuild</span>
+                    <span class="tech-badge">Automation Workflows</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEADERSHIP & ACHIEVEMENTS -->
+    <section class="main-section reveal" id="leadership">
+        <div class="section-header">
+            <p class="section-subtitle">Leadership & Achievements</p>
+            <h2 class="section-title">Achievements & Community</h2>
+        </div>
+        
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="achievement-icon">🏆</div>
+                <h3 class="achievement-title">Elite Her Hackathon 2025 – Top 100 Team</h3>
+                <p class="achievement-desc">Selected among the Top 100 teams in Elite Her Hackathon 2025.</p>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-icon">🤝</div>
+                <h3 class="achievement-title">SAMARTHA 2025 – Organizing Team Member</h3>
+                <p class="achievement-desc">Contributed to the planning, coordination, and successful execution of a national-level hackathon.</p>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-icon">🎓</div>
+                <h3 class="achievement-title">LetsUpgrade – Student Ambassador</h3>
+                <p class="achievement-desc">Promoted technical learning initiatives and supported community engagement activities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME DOWNLOAD SECTION -->
+    <section class="main-section reveal" id="resume">
+        <div class="resume-container">
+            <svg class="resume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <h3 class="resume-title">Curriculum Vitae</h3>
+            <p class="resume-text">View or download my comprehensive resume detailing academic achievements, technical projects, and professional credentials.</p>
+            <div class="resume-actions">
+                <a href="resume.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">View Resume</a>
+                <a href="resume.pdf" class="btn-secondary" download="Nanda_Gunasri_Resume.pdf">Download PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="main-section reveal" id="contact">
+        <div class="section-header" style="text-align: center;">
+            <p class="section-subtitle">Get In Touch</p>
+            <h2 class="section-title">Start a Conversation</h2>
+        </div>
+        
+        <div class="contact-container">
+            <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+                <div class="form-group">
+                    <label for="contactName">Name</label>
+                    <input type="text" id="contactName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" required placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label for="contactMsg">Message</label>
+                    <textarea id="contactMsg" rows="5" required placeholder="Describe your project, role, or proposal..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="align-self: flex-start; margin-top: 10px;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-copy">© 2026 Nanda Gunasri. All rights reserved.</div>
+        <div class="footer-socials">
+            <a href="https://github.com/NandaGunasri" class="footer-social-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/nanda-gunasri-6b59a429a/" class="footer-social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:nandagunasri@gmail.com" class="footer-social-link">Email</a>
+        </div>
+    </footer>
+
+    <!-- SUCCESS TOAST -->
+    <div class="toast" id="successToast">Message sent successfully!</div>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
 </body>
 </html>
